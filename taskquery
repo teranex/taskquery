@@ -1,0 +1,3 @@
+#!/bin/bash
+
+task $(`dirname $0`/taskquery.rb $@)
