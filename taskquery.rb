@@ -20,7 +20,8 @@ command, report = get_key_from_cmd('report', command)
 
 report = DEFAULT_REPORT if report.nil?
 
-new_cmd = "rc.report.#{report}.columns=#{columns} " unless columns.nil?
+new_cmd = ""
+new_cmd += "rc.report.#{report}.columns=#{columns} " unless columns.nil?
 new_cmd += "rc.report.#{report}.labels=#{labels} " unless labels.nil?
 if labels.nil? and !columns.nil?
   new_cmd += "rc.report.#{report}.labels=#{columns} "
